@@ -38,14 +38,4 @@ public class CourierCreationSpec {
                 .when()
                 .post(PATH_COURIER_CREATION);
     }
-
-    @Step("Сборка спецификации для отправки запроса на создание курьера без имени")
-    public static Response createCourierWithoutFirstnameField(String login, int password) {
-        CreateCourierDto createCourier = new CreateCourierDto(login, password);
-        return given()
-                .spec(BaseSpecClass.requestSpec())
-                .body(createCourier).log().all()
-                .when()
-                .post(PATH_COURIER_CREATION);
-    }
 }

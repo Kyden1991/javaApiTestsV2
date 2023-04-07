@@ -22,11 +22,6 @@ public class CreateCourierDto {
         this.firstName = firstName;
     }
 
-    public CreateCourierDto(String login, int password) {
-        this.login = login;
-        this.password = password;
-    }
-
     public String getLogin() {
         return login;
     }

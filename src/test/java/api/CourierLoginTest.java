@@ -51,6 +51,14 @@ public class CourierLoginTest extends BaseMethods {
         BaseSpecClass.responseStatusCode(courierLogin, HttpStatus.SC_NOT_FOUND);
     }
 
+    @Description("HTTP 404 status code is returned by the POST/api/v1/courier/login method with invalid login field")
+    @Test
+    public void postCourierLoginReturnStatusCode404WithInvalidLogin() {
+        Response courierLogin = CourierLoginSpec.courierLogin("1231231", getPassword());
+
+        BaseSpecClass.responseStatusCode(courierLogin, HttpStatus.SC_NOT_FOUND);
+    }
+
     @Description("HTTP 404 status code is returned by the POST/api/v1/courier/login method with non exist login")
     @Test
     public void postCourierLoginReturnStatusCode404WithNonExistLogin() {

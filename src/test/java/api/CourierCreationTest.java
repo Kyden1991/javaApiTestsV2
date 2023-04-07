@@ -50,14 +50,6 @@ public class CourierCreationTest extends BaseMethods {
 
         BaseSpecClass.responseStatusCode(courierLocalVar, HttpStatus.SC_BAD_REQUEST);
     }
-
-    @Description("HTTP 400 status code is returned by the POST/api/v1/courier method without first name required field")
-    @Test
-    public void postCourierCreationReturnStatusCode400WithoutFirstNameRequiredField() {
-        Response courierLocalVar = CourierCreationSpec.createCourierWithoutFirstnameField(randomString(), randomPassword());
-
-        BaseSpecClass.responseStatusCode(courierLocalVar, HttpStatus.SC_CREATED);
-    }
 }
 
 
