@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="api.CourierLoginTest" time="2.995" tests="8" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
+    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="user.timezone" value="Europe/Moscow"/>
+    <property name="maven.conf" value="/usr/share/maven/conf"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="maven.home" value="/usr/share/maven"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/INTEXSOFT/artsem.kazbanau"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-10-18"/>
+    <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.17+8-post-Ubuntu-1ubuntu222.04"/>
+    <property name="user.name" value="artsem.kazbanau"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.15.0-58-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-lts"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="11.0.17"/>
+    <property name="user.dir" value="/home/INTEXSOFT/artsem.kazbanau/JavaStuding/API tests"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/INTEXSOFT/artsem.kazbanau/JavaStuding/API tests"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Ubuntu"/>
+    <property name="java.vm.version" value="11.0.17+8-post-Ubuntu-1ubuntu222.04"/>
+    <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="library.jansi.path" value="/usr/share/maven/lib/jansi-native"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="postCourierLoginReturnStatusCode200" classname="api.CourierLoginTest" time="0.206"/>
+  <testcase name="postCourierLoginReturnStatusCode400WithoutPasswordField" classname="api.CourierLoginTest" time="0.307"/>
+  <testcase name="postCourierLoginReturnStatusCode400WithoutLoginField" classname="api.CourierLoginTest" time="0.41"/>
+  <testcase name="postCourierLoginReturnStatusCode404WithNonExistLogin" classname="api.CourierLoginTest" time="0.51"/>
+  <testcase name="postCourierLoginReturnStatusCode200WithCorrectBody" classname="api.CourierLoginTest" time="0.215"/>
+  <testcase name="postCourierLoginReturnStatusCode404WithNonExistPassword" classname="api.CourierLoginTest" time="0.4"/>
+  <testcase name="postCourierLoginReturnStatusCode404WithInvalidPassword" classname="api.CourierLoginTest" time="0.317"/>
+  <testcase name="api.CourierLoginTest" classname="api.CourierLoginTest" time="0.549">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;404&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+]]></failure>
+    <system-out><![CDATA[Request method:	DELETE
+Request URI:	http://qa-scooter.praktikum-services.ru/api/v1/courier/177895
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Access-Control-Allow-Origin: *
+Content-Length: 64
+Content-Type: application/json; charset=utf-8
+Date: Fri, 07 Apr 2023 05:40:11 GMT
+ETag: W/"40-tLkp/o3TzLGA5pEmOZ4MEpfo3Lo"
+Set-Cookie: _yasc=qd6ML3WiMvjySwfeVMETzexu7JfKHI/KpRhZ/gKXOKApYDGuLzBmVNaHyfE=; domain=.praktikum-services.ru; path=/; expires=Mon, 04-Apr-2033 05:40:11 GMT; secure
+X-Powered-By: Express
+X-Request-Id: 1680846011482448-4383941545168057642
+
+{
+    "code": 404,
+    "message": "Курьера с таким id нет."
+}
+]]></system-out>
+  </testcase>
+</testsuite>
