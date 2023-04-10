@@ -23,7 +23,7 @@ public class CourierCreationTest extends BaseMethods {
 
     @Description("HTTP 409 status code is returned by the POST/api/v1/courier method when create a duplicate courier")
     @Test
-    public void postCourierCreationReturnStatusCode409WithDuplicateLogin() {
+    public void postCourierCreationWithDuplicateLoginReturnStatusCode409() {
         Response courierLocalVar = CourierCreationSpec.createCourier(getLogin(), getPassword(), getFirstName());
 
         BaseSpecClass.responseStatusCode(courierLocalVar, HttpStatus.SC_CONFLICT);
@@ -31,13 +31,13 @@ public class CourierCreationTest extends BaseMethods {
 
     @Description("HTTP 201 status code and correct body is returned by the POST/api/v1/courier method with valid request parameters")
     @Test
-    public void postCourierCreationReturnStatusCode201WithCorrectBody() {
-        BaseSpecClass.responseWithBodyAssert(courier, 201, "ok", equalTo(true));
+    public void postCourierCreationWithCorrectBodyReturnStatusCode201() {
+        BaseSpecClass.responseWithBodyAssert(courier, HttpStatus.SC_CREATED, "ok", equalTo(true));
     }
 
     @Description("HTTP 400 status code is returned by the POST/api/v1/courier method without login field")
     @Test
-    public void postCourierCreationReturnStatusCode400WithoutLoginRequiredField() {
+    public void postCourierCreationWithoutLoginRequiredFieldReturnStatusCode400() {
         Response courierLocalVar = CourierCreationSpec.createCourierWithoutLoginField(randomPassword(), randomString());
 
         BaseSpecClass.responseStatusCode(courierLocalVar, HttpStatus.SC_BAD_REQUEST);
@@ -45,7 +45,7 @@ public class CourierCreationTest extends BaseMethods {
 
     @Description("HTTP 400 status code is returned by the POST/api/v1/courier method without password field")
     @Test
-    public void postCourierCreationReturnStatusCode400WithoutPasswordRequiredField() {
+    public void postCourierCreationWithoutPasswordRequiredFieldReturnStatusCode400() {
         Response courierLocalVar = CourierCreationSpec.createCourierWithoutPasswordField(randomString(), randomString());
 
         BaseSpecClass.responseStatusCode(courierLocalVar, HttpStatus.SC_BAD_REQUEST);

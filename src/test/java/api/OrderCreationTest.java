@@ -21,7 +21,7 @@ public class OrderCreationTest extends BaseMethods {
 
     @Test
     @Description("Return HTTP 201 status code and track in body by the POST/api/v1/orders method with valid request parameters and different colors")
-    public void postOrderCreationReturnStatusCode201WithDiffParameters() {
+    public void postOrderCreationWithDiffParametersReturnStatusCode201() {
         for (String[] color : this.color) {
             BaseSpecClass.responseWithBodyAssert(OrderCreationSpec.createOrder(
                     "Art",
